@@ -5,9 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background : linear-gradient(to right, #000000,#7e6000);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+header{
+  text-align: center;
+  font-size: 33px;
+  font-weight: 800;
+  padding: 5rem;
+  color : #ffffff;
+}
+
+.Calculator-Grid{
+  display: grid;
+  grid-template-columns: repeat(4,6rem);
+  grid-template-rows: minmax(7rem,auto) repeat(5,7rem);
+  justify-content: center;
+}
+
+.two-span{
+  grid-column: span 2;
+  background-color: #000000;
+}
+
+.Output{
+  grid-column: 1/-1;
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  outline: none;
+  border-bottom: 0.2px solid #7e6000;
+}
+
+button{
+  border: .05px solid #000000;
+  background-color: rgba(202, 155, 0, 0.30);
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  outline: none;
+}
+
+button:hover{
+  background-color: rgba(202, 155, 0, 0.27);
+  color: #ffffff;
+}
+
+.Output .previous-operand{
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.Output .current-operand{
+  color: rgba(255, 255, 255,0.88);
+  font-weight: 400;
+  font-size: 20px;
 }
